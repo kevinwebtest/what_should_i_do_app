@@ -1,0 +1,152 @@
+.input {
+    display: flex;
+    width: 90%;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.input__box {
+    width: 70%;
+    border-radius: 50px;
+    padding: 15px 30px 10px;
+    font-size: 25px;
+    border: none;
+    transition: 0.2s;
+    box-shadow: inset 0 0 5px black;
+    font-family: "Neucha", cursive;
+}
+
+.input__box:focus {
+    box-shadow: inset 0 0 200px 30px rgba(200, 200, 200, 0.213), inset 0 0 5px rgb(0, 0, 0);
+    outline: none;
+}
+
+.input__submit {
+    display: block;
+    position: absolute;
+    width: 37px;
+    height: 37px;
+    margin-left: 70%;
+    border-radius: 50%;
+    border: none;
+    font-size: 15px;
+    background-color: #ffb700;
+    color: black;
+    transition: 0.2s;
+    box-shadow: 0 0 5px black;
+}
+
+.input__submit:hover {
+    transform: scale(0.8);
+    box-shadow: 0 0 10px black;
+    background-color: #ff9500;
+    cursor: pointer;
+}
+
+.container{
+    display: flex;
+    width: 90%;
+    margin-top: 10px;
+    justify-content: center;
+    column-gap: 3rem;
+    align-items: flex-start;
+}
+
+.todos {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    padding: 25px;
+    border-radius: 5px;
+    background-color: #72ce27;
+    /* column-gap: 3rem; */
+}
+
+.pin {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+}
+
+.pin-in {
+    height: 20px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #ffc800;
+}
+
+.todos__heading {
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.todos__single {
+    display: flex;
+    border-radius: 12px;
+    box-shadow: 0 5px 5px rgba(100, 100, 100, 0.268);
+    padding: 20px;
+    margin-top: 15px;
+    background-color: #fff700;
+    transition: 0.2s;
+} 
+
+.todos__single:hover {
+    box-shadow: 0 10px 5px rgba(100, 100, 100, 0.268);
+    transform: translateY(-5px);
+}
+
+.todos__single--text {
+    flex: 1;
+    padding: 5px;
+    border: none;
+    font-size: 20px;
+}
+
+.todos__single--text:focus {
+    outline: none;
+}
+
+.icon {
+    margin-left: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.remove {
+    background-color: #ff8800;
+}
+
+.dragactive{
+    background-color: #7ee12d;
+}
+
+.dragremove {
+    background-color: #ffb300;
+}
+
+.drag{
+    box-shadow: 0 10px 5px rgba(100, 100, 100, 0.6);
+}
+
+@media (max-width: 1200px) {
+    .container{
+        column-gap: 2rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .input{
+        width: 100%;
+    }
+    .todos {
+        margin-bottom: 10px;
+        width: 85%;
+    }
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
