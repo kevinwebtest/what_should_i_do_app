@@ -131,6 +131,11 @@
     box-shadow: 0 10px 5px rgba(100, 100, 100, 0.6);
 }
 
+.input__submit {
+    font-family: "Neucha", cursive;
+    font-weight: 800;
+}
+
 @media (max-width: 1200px) {
     .container{
         column-gap: 2rem;
