@@ -8,10 +8,10 @@ import { DragDropContext, DropResult } from 'react-beautiful-dnd';
 
 const App: React.FC = () => {
   const [todoText, setTodoText] = useState<string>("");
-  const storedTodos = localStorage.getItem("todos");
+  const storedTodos: string | null = localStorage.getItem("todos");
   const initialTodos: Todo[] = storedTodos ? JSON.parse(storedTodos) : [];
   const [todos, setTodos] = useState<Todo[]>((initialTodos))
-  const storedCompletedTodos = localStorage.getItem("completedTodos");
+  const storedCompletedTodos: string | null = localStorage.getItem("completedTodos");
   const initialCompletedTodos: Todo[] = storedCompletedTodos ? JSON.parse(storedCompletedTodos) : [];
   const [completedTodos, setCompletedTodos] = useState<Todo[]>(initialCompletedTodos)
 
